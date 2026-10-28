@@ -15,7 +15,7 @@ class Tienda {
       //NO ES SU RESPONSABILIDAD
       terminalExterna.cobrar(total / 18.0);
     } else {
-      throw ArgumentError('Metodo de pago invalido ');
+      throw ArgumentError('Metodo de pago no válido');
     }
   }
 }
