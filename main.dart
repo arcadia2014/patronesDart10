@@ -1,14 +1,21 @@
 import 'singleton/configuuracion.dart';
 
 void main(){
-  final pantallainicio = Configuuracion('es');
+  final pantallaInicio = Configuracion();
 
-  final pantallaperfil =  Configuuracion('es');
+  final pantallaPerfil =  Configuracion();
 
-  pantallainicio.idioma = 'en';
+  print('idioma de la pantalla de inicio: ${pantallaInicio.Idioma}');
+    print('idioma de la pantalla de perfil: ${pantallaPerfil.Idioma}');
+ 
+  pantallaInicio.Idioma = 'en';
 
-  print ('idioma de la pantalla de inicio: ');
-  print (pantallainicio.idioma);
-  print ('idioma de la pantalla de perfil: ');
-  print (pantallaperfil.idioma);
+  print ('idioma de la pantalla de inicio:  ${pantallaInicio.Idioma}');
+  print ('idioma de la pantalla de perfil:  ${pantallaPerfil.Idioma}');
+  print (identical(pantallaInicio, pantallaPerfil)
+        ?'Ambas pantallas son la misma instancia.'
+        : 'Las pantallas son instancias diferentes.',
+         
+        );
+  
 }
